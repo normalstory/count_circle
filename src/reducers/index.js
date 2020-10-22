@@ -1,38 +1,15 @@
-/*for redux 2 redusers */
+/*for redux 5 고도화 2)용도별 리듀서를 index에서 합치기 */
+import color from './color';
+import number from './number';
 
-// import React .. ㅋㅋ   -> 리듀서는 'type'별로 실행한 경로를 분기처리하는 곳! 
-import * as types from '../actions/ActionTypes';
+import { combineReducers } from 'redux';
 
-// 1)초기상태정의 
-const initialState = {
-    color: 'black',
-    number: 0
-}
+const reducers = combineReducers({
+    numberData: number,
+    colorData:color
+});
 
-//2)상태(초기상태포함)와 액션(key = action.type)을 파라미터로 하는 분기처리 함수작성  
-function counter(state=initialState, action){
-    switch (action.type) {
-        case types.INCREMENT:
-            return{
-                ...state,
-                //number: number+1 틀~
-                number: state.number+1
-            };    
-        case types.DECREMENT:
-            return{
-                ...state,
-                //number: number-1 틀~
-                number: state.number-1
-            }
-        case types.SET_COLOR:
-            return{
-                ...state,
-                //color: color 틀~
-                color: action.color
-            }
-        default:
-            return state
-    }
-}
+export default reducers;
 
-export default counter;
+
+// 추가된 -> numberData, colorData에 대한 내용을 CounterContainer 코드에 반영  

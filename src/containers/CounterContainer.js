@@ -9,9 +9,13 @@ import { connect } from 'react-redux';
 
 
 //state 연동 
+
 const mapStateToProps = (state) => ({
-    number:state.number,
-    color:state.color
+    // number:state.number,
+    // color:state.color
+    /*for redux 5 고도화 3)numberData, colorData에 대한 내용을 CounterContainer 코드에 반영 */
+    number:state.numberData.number,
+    color:state.colorData.color
 });
 
 //(actions/index에 있는)액션함수들 연동 -> '() => dispatch()'로  
