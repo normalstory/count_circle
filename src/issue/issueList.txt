@@ -1,0 +1,85 @@
+index.js:1 Warning: Expected `onClick` listener to be a function, instead got a value of `object` type.
+    at div
+    at Counter (http://localhost:3000/static/js/main.chunk.js:336:3)
+    at div
+    at CounterList (http://localhost:3000/static/js/main.chunk.js:462:3)
+    at Connect(CounterList) (http://localhost:3000/static/js/0.chunk.js:33414:75)
+    at div
+    at App (http://localhost:3000/static/js/main.chunk.js:547:1)
+    at Connect(App) (http://localhost:3000/static/js/0.chunk.js:33414:75)
+    at Provider (http://localhost:3000/static/js/0.chunk.js:33127:20)
+
+    index.js:1 Warning: Cannot update a component (`Connect(CounterList)`) while rendering a different component (`Counter`). To locate the bad setState() call inside `Counter`, follow the stack trace as described in https://reactjs.org/link/setstate-in-render
+    at Counter (http://localhost:3000/static/js/main.chunk.js:336:3)
+    at div
+    at CounterList (http://localhost:3000/static/js/main.chunk.js:462:3)
+    at Connect(CounterList) (http://localhost:3000/static/js/0.chunk.js:33414:75)
+    at div
+    at App (http://localhost:3000/static/js/main.chunk.js:547:1)
+    at Connect(App) (http://localhost:3000/static/js/0.chunk.js:33414:75)
+    at Provider (http://localhost:3000/static/js/0.chunk.js:33127:20)
+
+    index.js:1 Warning: Expected `onClick` listener to be a function, instead got a value of `object` type.
+    at div
+    at Counter (http://localhost:3000/static/js/main.chunk.js:336:3)
+    at div
+    at CounterList (http://localhost:3000/static/js/main.chunk.js:462:3)
+    at Connect(CounterList) (http://localhost:3000/static/js/0.chunk.js:33414:75)
+    at div
+    at App (http://localhost:3000/static/js/main.chunk.js:547:1)
+    at Connect(App) (http://localhost:3000/static/js/0.chunk.js:33414:75)
+    at Provider (http://localhost:3000/static/js/0.chunk.js:33127:20)
+
+    The above error occurred in the <Counter> component:
+
+    at Counter (http://localhost:3000/static/js/main.chunk.js:336:3)
+    at div
+    at CounterList (http://localhost:3000/static/js/main.chunk.js:462:3)
+    at Connect(CounterList) (http://localhost:3000/static/js/0.chunk.js:33414:75)
+    at div
+    at App (http://localhost:3000/static/js/main.chunk.js:547:1)
+    at Connect(App) (http://localhost:3000/static/js/0.chunk.js:33414:75)
+    at Provider (http://localhost:3000/static/js/0.chunk.js:33127:20)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+react-dom.development.js:23795 Uncaught Error: Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.
+    at checkForNestedUpdates (react-dom.development.js:23795)
+    at scheduleUpdateOnFiber (react-dom.development.js:21827)
+    at dispatchAction (react-dom.development.js:16131)
+    at Subscription.checkForUpdates (connectAdvanced.js:88)
+    at Subscription.handleChangeWrapper (Subscription.js:97)
+    at Subscription.js:23
+    at batchedUpdates$1 (react-dom.development.js:22372)
+    at Object.notify (Subscription.js:19)
+    at Subscription.notifyNestedSubs (Subscription.js:92)
+    at Subscription.handleChangeWrapper (Subscription.js:97)
+    at Object.dispatch (redux.js:222)
+    at e (<anonymous>:1:40553)
+    at onIncrement (CounterListContainer.js:35)
+    at Counter (Counter.js:11)
+    at renderWithHooks (react-dom.development.js:14977)
+    at updateFunctionComponent (react-dom.development.js:17348)
+    at beginWork (react-dom.development.js:19055)
+    at beginWork$1 (react-dom.development.js:23932)
+    at performUnitOfWork (react-dom.development.js:22768)
+    at workLoopSync (react-dom.development.js:22699)
+    at renderRootSync (react-dom.development.js:22662)
+    at performSyncWorkOnRoot (react-dom.development.js:22285)
+    at react-dom.development.js:11319
+    at unstable_runWithPriority (scheduler.development.js:646)
+    at runWithPriority$1 (react-dom.development.js:11268)
+    at flushSyncCallbackQueueImpl (react-dom.development.js:11314)
+    at flushSyncCallbackQueue (react-dom.development.js:11301)
+    at unbatchedUpdates (react-dom.development.js:22430)
+    at legacyRenderSubtreeIntoContainer (react-dom.development.js:26012)
+    at Object.render (react-dom.development.js:26095)
+    at Module../src/index.js (index.js:15)
+    at __webpack_require__ (bootstrap:784)
+    at fn (bootstrap:150)
+    at Object.1 (serviceWorker.js:141)
+    at __webpack_require__ (bootstrap:784)
+    at checkDeferredModules (bootstrap:45)
+    at Array.webpackJsonpCallback [as push] (bootstrap:32)
+    at main.chunk.js:1
