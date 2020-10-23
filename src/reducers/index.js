@@ -20,12 +20,15 @@ function counter(state=initailState, action){
 
     switch (action.type) {
         case types.CREATE:
-            return [
-                ...counters,{
-                    color : action.color,
-                    number : 0
-                }
-            ]
+            return {
+                counters :  [// 틀 , 수정 .. <- 빠뜨리고 안적었던 부분..
+                    ...counters,
+                    {
+                        color : action.color,
+                        number : 0
+                    }
+                ]
+            }
         case types.REMOVE:
             return {
                 counters: counters.slice(0, counters.length -1)

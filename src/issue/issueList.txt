@@ -1,3 +1,24 @@
+*해결: 
+1.componet :Counter.js 
+            멀티화 과정에서, 객체를 함수처리하지 못함 - '() =>' 
+                onClick={() => onIncrement(index)}
+
+            props에 객체담지 못함 - '{ }'누락
+                ({counters, onIncrement, onDecrement, onSetColor})
+
+2.reducer: 멀티화 과정에서, 분기처리 시 각 속성들에 대한 객체, 배열처리 미흡x - { counter : [ ...
+        return {
+            counter : [ 
+                ...counters,
+                {
+                    color: action.color,
+                    number : 0
+                }
+            ]
+        }; 
+
+Error: Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.
+
 index.js:1 Warning: Expected `onClick` listener to be a function, instead got a value of `object` type.
     at div
     at Counter (http://localhost:3000/static/js/main.chunk.js:336:3)

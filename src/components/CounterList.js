@@ -30,12 +30,13 @@ const CounterList =({counters, onIncrement, onDecrement, onSetColor}) => {
 //검증
 CounterList.propTypes={
     // counter: PropTypes.array, 
-    counter: PropTypes.arrayOf( //덩어리니까... arrayOf
-        PropTypes.shape({ //개별 상세 내용은 shape에.. 
-            color:PropTypes.string,
-            number:PropTypes.number
-        })
-    ),
+    //  틀2  counter:
+    counters: 
+            PropTypes.arrayOf( //덩어리니까... arrayOf
+                PropTypes.shape({ //개별 상세 내용은 shape에.. 
+                    color:PropTypes.string,
+                    number:PropTypes.number
+            })),
     onIncrement: PropTypes.func, 
     onDecrement: PropTypes.func,
     onSetColor: PropTypes.func
@@ -43,10 +44,11 @@ CounterList.propTypes={
 //초기값 
 CounterList.defaultProps={
     // counter: {...Counter}, 
+    //  틀2  counter:
     // onIncrement: console.log("onIncrement가 정의되지 않았습니다."), 
     // onDecrement: console.log("onDecrement가 정의되지 않았습니다."), 
     // onSetColor: console.log("onSetColor가 정의되지 않았습니다.")  //틀~ 
-    counter:[] //헐.. 그러네 
+    counters:[] //헐.. 그러네 
 }
 
 export default CounterList;
